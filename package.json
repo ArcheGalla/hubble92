@@ -6,7 +6,7 @@
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
     "build": "preact build; npm run copy",
-    "deploy": "preact build; npm run copy",
+    "deploy": "npm run build; ./node_modules/.bin/surge --project ./build",
     "copy": "cp ./src/CNAME ./build",
     "serve": "preact build && preact serve",
     "dev": "preact watch",
