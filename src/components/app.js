@@ -6,6 +6,8 @@ import Footer from './footer';
 import Content from './content';
 import Home from '../routes/home';
 import Profile from '../routes/profile';
+import style from './app.scss';
+
 // import Home from 'async!../routes/home';
 // import Profile from 'async!../routes/profile';
 
@@ -16,7 +18,7 @@ export default class App extends Component {
 
 		render() {
 				return (
-					<div id="app">
+					<div className={style.app}>
 							<Header/>
 							<Content>
 									<Router onChange={this.handleRoute}>
